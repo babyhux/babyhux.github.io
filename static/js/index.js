@@ -51,10 +51,16 @@ let soul = [
   '抢银行的时候被抓了，我本来想反抗，警察说了一句老实点别动。我立刻就放弃了抵抗。因为我记得你说过你喜欢老实人。',
   '又到了一年一度，可以厚着脸皮表白你的日子了。还记得去年愚人节。我给你偷偷发了一句“我们在一起吧？”你回我了一句“sb”我当时开心极了这一定就是“随便”的意思吧想不到，我们在一起已经整整一年了。 ​'
   ];
-  let nowDate = date.getFullYear() + seperator + date.getMonth() + seperator + date.getDate();
+  let nowDate = new Date();
+  let seperator = '-';
+  let newMonth = nowDate.getMonth()+1;
+  // let newdate = ;
   function randomSentence() {
     document.getElementById('sentence').innerHTML = soul[Math.floor(Math.random() * soul.length)];
-    document.getElementById('date').innerHTML = nowDate + '晴'+' ';
+    document.getElementById('date').innerHTML = nowDate.getFullYear() + seperator + newMonth + seperator + nowDate.getDate() + '晴'+' ';
   }
   
+  
+window.onload=function(){
   randomSentence();
+};
