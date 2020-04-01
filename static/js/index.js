@@ -53,7 +53,7 @@ let soul = [
 
 function randomSentence() {
   document.getElementById('sentence').innerHTML = soul[Math.floor(Math.random() * soul.length)];
-  document.getElementById('date').innerHTML = Date() + '晴';
+  document.getElementById('date').innerHTML = Date() + '晴'+' ';
 }
 
 randomSentence();
